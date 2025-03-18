@@ -1,0 +1,56 @@
+.card {
+  max-width: 380px;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  border: 3px solid white;
+  border-image: linear-gradient(
+    90deg,
+    #1c3477 0%,
+    #1c3477 0.01%,
+    #1a3578 39.11%,
+    #73184b 75.5%,
+    #b4022a 100%
+  );
+  border-image-slice: 1;
+  background-color: #fff;
+  color: #1a3578;
+}
+
+.title {
+  margin: 0;
+  color: #123899;
+}
+
+.author {
+  margin: 0;
+}
+
+.description {
+  text-align: justify;
+  margin: 0;
+}
+
+.onAddToCart {
+  padding: 10px 20px;
+  border: 3px solid rgb(37, 73, 172);
+  border-radius: 1.3em;
+  box-shadow: 3px 3px 5px rgb(37, 73, 172);
+  transition: transform 0.3s;
+
+  &:hover,
+  &:focus-visible {
+    background: linear-gradient(135deg, #1c3477 0%, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
+    border-image-slice: 1;
+    color: #fff;
+    border-color: #39589c;
+    box-shadow: 10px 10px 10px rgb(37, 73, 172);
+  }
+
+  &:active {
+    transform: scale(1.05);
+    transition: transform 0.3s
+  }
+}

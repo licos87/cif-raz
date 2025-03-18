@@ -1,0 +1,119 @@
+.body {
+  margin: 0 auto;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+.header {
+  padding: 0.625em 2.25em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3e41ec;
+  border-radius: 3em 0;
+}
+
+.header__link {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  padding-left: 50px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 40px;
+    top: -10px;
+    left: 0;
+    background: url(../assets/img/cart.svg) top no-repeat;
+  }
+}
+
+.catalog {
+  padding: 1.25em;
+  color: #fff;
+  border-radius: 0 3em;
+  background-color: #4d50f8;
+}
+
+.catalog__title {
+  text-align: center;
+}
+
+.catalog__conteiner {
+  text-align: center;
+}
+
+.catalog__list {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  gap: 3vw;
+
+    @media (min-width: 600px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:3vw;
+      }
+}
+
+.catalog__card {
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  border: 3px solid white;
+  border-image: linear-gradient(90deg, #1c3477 0%, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
+  border-image-slice: 1;
+  background-color: #fff;
+  color: #1a3578;
+}
+
+.card__img {
+  width: 90%;
+  min-width: 140px;
+  max-width: 240px;
+  height: auto;
+}
+
+.card__title {
+  margin: 0;
+  color: #123899;
+}
+
+.card__author {
+  margin: 0;
+}
+
+.card__description {
+  text-align: justify;
+  margin: 0;
+}
+
+.card__btn {
+  padding: 10px 20px;
+  border: 3px solid rgb(37, 73, 172);
+  border-radius: 1.3em;
+  box-shadow: 3px 3px 5px rgb(37, 73, 172);
+  transition: transform 0.3s;
+
+  &:hover,
+  &:focus-visible {
+    background: linear-gradient(135deg, #1c3477 0%, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
+    border-image-slice: 1;
+    color: #fff;
+    border-color: #39589c;
+    box-shadow: 10px 10px 10px rgb(37, 73, 172);
+  }
+
+  &:active {
+    transform: scale(1.05);
+    transition: transform 0.3s
+  }
+}
