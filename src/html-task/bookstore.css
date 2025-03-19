@@ -56,10 +56,10 @@
   gap: 3vw;
 
     @media (min-width: 600px) {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap:3vw;
-      }
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:3vw;
+    }
 }
 
 .catalog__card {

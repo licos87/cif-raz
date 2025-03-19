@@ -44,7 +44,8 @@ export function BookCard({
         type="button"
         onClick={() => onHandleClick(id)}
       >
-        Добавить в корзину
+        {onAddToCart && 'Добавить в корзину'}
+        {onRemoveFromCart && 'Удалить из корзины'}
       </button>
     </div>
   );
